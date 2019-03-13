@@ -109,19 +109,7 @@ namespace BST
                     TempNode = TempNode.Right;
             }
             return false;
-        }
-
-        public void CopyTo(T[] array, int arrayIndex)
-        {
-            T[] TempArray = new T[NumberOfNodes];
-            int Counter = 0;
-            foreach (T Value in this)
-            {
-                TempArray[Counter] = Value;
-                ++Counter;
-            }
-            Array.Copy(TempArray, 0, array, arrayIndex, this.NumberOfNodes);
-        }
+        }        
 
         public int Count
         {
@@ -185,8 +173,7 @@ namespace BST
                     yield return RightNode;
             }
         }
-
-        
+                
         private void Insert(T item)
         {
             BNode<T> TempNode = Root;
@@ -261,12 +248,8 @@ namespace BST
         
         public BNode<T> Left { get; set; }
        
-        public BNode<T> Right { get; set; }
+        public BNode<T> Right { get; set; }       
         
-        public bool IsRoot { get { return Parent == null; } }
-        
-        public bool IsLeaf { get { return Left == null && Right == null; } }
-
         internal bool Visited { get; set; }       
 
         public override string ToString()
@@ -275,8 +258,6 @@ namespace BST
         }
 
         
-    }
-
-    public class BTree<T> ReadMeds() { }
+    }    
 
 }
