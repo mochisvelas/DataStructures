@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "LoadTree";
+    Layout = "~/Views/Partial/Layout.cshtml";
+}
+
+<center><h5 style="padding: 10px">Cargar fármacos al árbol binario :)</h5></center>
+<div>
+    <form class="form" id="btreeform" action=@Url.Action("LoadTree") method="post" enctype="multipart/form-data">
+        <input type="file" class="textbox" name="csvFile" id="csvFile" accept=".csv" required />
+        <input type="submit" class="button-primary btn" name="Enter" value="Cargar" />
+    </form>
+</div>
